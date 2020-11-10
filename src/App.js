@@ -47,7 +47,6 @@ function App() {
               <TituloOpciones>Cronología</TituloOpciones>
             </LiOpcionFinal>
           </a>
-
         </UlLista>
       </ContainerMaster>
     </Wrapper>
@@ -56,15 +55,19 @@ function App() {
 
 const Wrapper = styled.div`
   overflow-x: auto;
+  overflow-y: hidden;
 `
 
 const ContainerMaster = styled.div`
-  max-width : 974px;
+  width : 974px;
   height : 78px;
   margin : 5 auto ;
   padding: 5px 0;
   border-top : 1px solid #C7C9D3 ;
   border-bottom : 1px solid #C7C9D3 ;
+  @media(max-width: 750px) {
+    height: 53px;
+  }
 `
 const UlLista = styled.ul`
   display: flex;
@@ -75,6 +78,9 @@ const UlLista = styled.ul`
   & a {
     text-decoration: none;
     color: black;
+  }
+  @media(max-width: 750px) {
+    height: 41px;
   }
 `
 const LiOpciones = styled.li`
@@ -87,6 +93,13 @@ const LiOpciones = styled.li`
   border-right: 1px solid #F0F0F0;
   &:hover{
     opacity: 0.6;
+  }
+  @media(max-width: 750px) {
+    height: 46px;
+    & img {
+      height: 35px;
+      width: 35px;
+    }
   }
 `
 const ImgGolpeEstado = styled.img`
@@ -104,6 +117,9 @@ const TituloOpciones = styled.p`
   display: flex;
   align-items: center;
   text-align: center;
+  @media(max-width: 750px) {
+    height: 53px;
+  }
 `
 const ImgNoticias = styled.img`
   height: 55px;
@@ -129,6 +145,13 @@ const LiOpcionFinal = styled.li`
   cursor: pointer;
   &:hover{
     opacity: 0.6;
+  }
+  @media(max-width: 750px) {
+    height: 46px;
+    & img {
+      height: 35px;
+      width: 35px;
+    }
   }
 `
 export default App;
